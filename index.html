@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quinto Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <div class="logo">
+                <img src="./logo.png" alt="Logo">
+                <p>UNIQ</p>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-links">Home</a></li>
+                <li><a href="#projects" class="nav-links">Projects</a></li>
+                <li><a href="#contacts" class="nav-links">Contacts</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div class="text">
+            <h1>Hi, I'm Nerizza Quinto</h1>
+            <h2>A <span class="auto-type"></span></h2>
+            <div>
+                <p>I am a student from University of the Cordilleras specializing in web development and design using <b>HTML</b>, <b>CSS</b>, and <b>JavaScript</b>.
+                    My goal is to deliver user-friendly, responsive, and effective web projects.</p>
+            </div>
+            <a href="./Quinto CV.pdf" download target="_blank"><button>Download CV</button></a>
+        </div>
+        <div class="image">
+            <img src="./neripic.png" alt="My photo">
+        </div>
+        <div class="cursor"></div>
+    </section>
+
+    <section id="projects">
+        <h1>⥼ Projects ⥽</h1>
+        <div class="projects">
+            <a href="https://neriquinto.github.io/Event-Invitation/" class="project-tile" target="_blank">
+                <img src="./eventinv.png" alt="">
+                <p><span>&lt;</span>Event Invitation<span>/&gt;</span></p>
+            </a>
+            <a href="https://neriquinto.github.io/SurveyForm/" class="project-tile" target="_blank">
+                <img src="./surveyform.png" alt="">
+                <p><span>&lt;</span>Survey Form<span>/&gt;</span></p>
+            </a>
+            <a href="https://neriquinto.github.io/TributePage/" class="project-tile" target="_blank">
+                <img src="./tribute.png" alt="">
+                <p><span>&lt;</span>Tribute Page<span>/&gt;</span></p>
+            </a>
+            <a href="https://neriquinto.github.io/TechnicalDocument/" class="project-tile" target="_blank">
+                <img src="./techdoc.png" alt="">
+                <p><span>&lt;</span>Tech Document<span>/&gt;</span></p>
+            </a>
+            <a href="https://neriquinto.github.io/ProductPage/" class="project-tile" target="_blank">
+                <img src="./prodpage.png" alt="">
+                <p><span>&lt;</span>Product Page<span>/&gt;</span></p>
+            </a>
+        </div>
+    </section>
+
+    <section id="contacts">
+        <h1>Let's work together!</h1>
+        <p class="coffee-question">Got some ideas? Tell me about it!</p>
+        <div class="social-medias">
+            <a href="https://www.facebook.com/nerriza.quinto/" target="_blank" class="social-media">
+                <p>Facebook</p>
+            </a>
+            <a href="https://www.instagram.com/newikins/" target="_blank" class="social-media">
+                <p>Instagram</p>
+            </a>
+            <a href="https://github.com/neriquinto/Quinto-2G" target="_blank" class="social-media" id="profile-link">
+                <p>GitHub</p>
+            </a>
+        </div>
+        <div class="grid">
+            <div class="box">
+                <h3><b>Send a mail</b></h3>
+                <p>quintonerizza@gmail.com</p>
+            </div>
+            <div class="box">
+                <h3><b>Call me</b></h3>
+                <p>+63 945 123 4567</p>
+            </div>
+        </div>
+    </section>
+    
+    <button class="totop" onclick="toTop()">Go back to top</button>
+
+    <footer>Copyright &copy;2024; created by Nerizza Quinto</footer>
+
+    <!-- JAVASCRIPT -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed(".auto-type",{
+            strings : ["Front-End Developer", "Graphic Designer"],
+            typeSpeed : 150,
+            backSpeed : 150,
+            loop : true
+        })
+
+        const cursor = document.querySelector('.cursor');
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        })
+
+        const toTop = () => window.scrollTo({top: 0, behavior: 'smooth'})
+    </script>
+</body>
+</html>

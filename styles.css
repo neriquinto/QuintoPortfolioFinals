@@ -1,0 +1,339 @@
+/* UNIVERSAL */
+:root {
+    --neutral: #d6a9a9;
+    --base: #fffffe;
+    --dark: #291229;
+    --primary: #e9e9d6;
+    --secondary: #ffd7dc; 
+    --accent: #289130;  
+    --dark-accent: #21423c; 
+}
+
+* {
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Verdana, sans-serif;
+    text-align: center;
+    background-color: var(--primary);
+    cursor: none;
+}
+
+/* HEADER */
+#navbar {
+    z-index: 1;
+    color: var(--dark);
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--neutral);
+    padding: 10px 0;
+    font-size: 20px;
+    border-bottom: 2px solid var(--base);
+}
+
+.logo img {
+    max-width: 50px;
+    margin-left: 35px;
+    cursor: pointer;
+}
+.logo p {
+    display: inline-block;
+    left: 7%;
+    bottom: 25%;
+    position: relative;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+}
+
+.nav-links {
+    color: var(--dark);
+    margin-right: 12px;
+    display: flex;
+    padding: 7px 10px 0px 0px;
+    list-style: none;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+    transform: translateY(2px);
+}
+
+/* ALL SECTION */
+section {
+    min-height: 100vh;
+    padding: 70px 0;
+}
+
+h1 {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 50px;
+}
+
+/* HOME */
+#home {
+    background-color: var(--primary);
+    color: var(--dark);
+    margin: 200px 90px;
+}
+
+#home h1 {
+    margin: 0;
+    font-size: 60px;
+}
+
+#home .text {
+    text-align: left;
+}
+
+.text div {
+    border-left: 3px solid var(--neutral);
+}
+
+.text h2 {
+    color: var(--accent);
+    margin-top: 5px;
+}
+
+.text p {
+    font-size: larger;
+    max-width: 50%;
+    margin-top: 25px;
+    margin-left: 15px;
+}
+
+.text button {
+    background-color: var(--secondary);
+    margin-top: 30px;
+    padding: 10px 30px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.text button:hover {
+    background-color: var(--neutral);
+    transition: all 0.5s ease 0s;
+}
+
+.image {
+    width: 35%;
+    height: 80%;
+    position: absolute;
+    bottom: 0; 
+    right: 100px;
+    margin-right: 60px;
+    transition: 1s;
+}
+.image img {
+    height: 100%;
+    position: absolute;
+    left: 10%;
+    bottom: 0;
+    transition: 1s;
+}
+
+.image img:hover {
+    transform: scale(1.1);
+}
+
+/* PROJECTS */
+#projects {
+    background-color: var(--secondary);
+    color: var(--dark);
+    margin-top: -450px;
+    border: 50px solid transparent;
+    border-image: url(https://www.onlygfx.com/wp-content/uploads/2018/01/colorful-flower-frame-rectangle-3.png) 25% round;
+}
+
+#projects .projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px;
+    place-items: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+#projects .project-tile {
+    height: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary);
+    text-decoration: none;
+    color: var(--dark-accent);
+    border-radius: 5px;
+    transition: 1s;
+}
+
+#projects .project-tile img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#projects .project-tile:hover {
+    transform: scale(1.05);
+}
+
+#projects .project-tile p {
+    font-size: 25px;
+    padding: 10px;
+}
+
+#projects .project-tile span{
+    opacity: 0%;
+    padding: 0 5px;
+}
+
+#projects .project-tile:hover span{
+    opacity: 100%;
+    color: var(--accent);
+    transition: opacity 0.25s ease-in;
+}
+
+/* CONTACTS */
+#contacts {
+    color: var(--dark-accent);
+    min-height: 70vh;
+}
+
+#contacts h1 {
+    margin-top: 150px;
+}
+
+#contacts .coffee-question {
+    color: var(--accent); 
+    font-size: 25px;
+    font-style: italic;
+}
+
+#contacts .social-medias {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    justify-content: space-around;
+    margin: auto;
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+.grid {
+    display: inline-flex;
+    margin: auto;
+}
+
+.box {
+    text-align: center;
+    margin: -70px;
+    padding: 10px;
+    width: 340px;
+}
+
+.box p {
+    margin-top: 20px;
+}
+
+#contacts .social-media {
+    text-decoration: none;
+    color: var(--dark-accent);
+    transition: transform 0.2s ease-in;
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    margin-top: 15px;
+    font-size: 22px;
+}
+
+#contacts .social-media:hover {
+    transform: translateY(10px);
+}
+
+.totop {
+    background-color: var(--secondary);
+    margin: 30px 0;
+    padding: 10px 10px;
+    font-size: 15px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+/* FOOTER */
+footer {
+    background-color: var(--neutral);
+    color: var(--base-100);
+    padding: 30px;
+    border-top: 2px solid var(--base);
+}
+
+/* JAVASCRIPT */
+.cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #7F00FF;
+    transition: 0.1s;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    mix-blend-mode: difference;
+}
+
+:hover ~ .cursor{
+    transform: scale(3);
+}
+
+/* RESPONSIVENESS */
+
+/* MOBILE */
+@media screen and (max-width: 768px) {
+    #home h1 {
+        font-size: 45px;
+    }
+
+    .image {
+        width: 15%;
+        height: 40%;
+        right: 150px;
+    }
+}
+
+/* TABLET */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    #home h1 {
+        font-size: 50px;
+    }
+
+    .image {
+        width: 15%;
+        height: 50%;
+        right: 200px;
+    }
+}
+
+@media screen and (min-width: 1023px) and (max-width: 1280px) {
+    #home h1 {
+        font-size: 55px;
+    }
+    
+    .image {
+        width: 15%;
+        height: 65%;
+        right: 250px;
+    }
+}
